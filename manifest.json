@@ -1,12 +1,9 @@
 {
-  "name": "My First Extension",
+  "name": "Fasdfa Tasks",
   "version": "1.0",
-  "description": "The first extension that I made.",
+  "description": "Todo lists, simple like your mother.",
   "browser_action": {
     "default_icon": "icon.png",
 	"popup": "popup.html"
-  },
-  "permissions": [
-    "http://api.flickr.com/"
-  ]
+  }
 }
