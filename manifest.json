@@ -1,9 +1,10 @@
 {
-  "name": "Fasdfa Tasks",
+  "name": "__MSG_extName__",
+	"description": "__MSG_extDescription__",
   "version": "1.0",
-  "description": "Todo lists, simple like your mother.",
+	"default_locale": "en",
   "browser_action": {
     "default_icon": "icon.png",
-	"popup": "popup.html"
+		"popup": "popup.html"
   }
 }

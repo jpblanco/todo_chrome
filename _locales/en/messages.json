@@ -1,0 +1,24 @@
+{
+	"extName": {
+		"message": "Chrome ToDo list",
+		"description": "This is the name of the extension"
+	},
+
+	"extDescription": {
+		"message": "Super cool ToDo list extension for google chrome",
+		"description": "This is the description of the extension"
+	},
+
+	// Internal application translation
+
+	"appTitle": {
+		"message": "TODO lists",
+		"description": "This is the application title"
+	},
+
+	"globalList": {
+		"message": "Global",
+		"description": "This is the name for the default todo list"
+	}	
+
+}
