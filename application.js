@@ -46,7 +46,7 @@ var Counter = function() {
 			count = new_count;
 			
 			// Store the counter in the db
-			DB.save(Settings.counterName, count)			
+			DB.save(Settings.counterName, count);
 			
 			chrome.browserAction.setBadgeText({ text: '' + count });
 			chrome.browserAction.setBadgeBackgroundColor({ color:  currentColorArray})

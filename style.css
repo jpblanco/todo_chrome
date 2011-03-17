@@ -1,0 +1,10 @@
+  body {
+    min-width: 357px;
+    overflow-x: hidden;
+    font-family:
+  }
+  .list {
+    border-radius: 4px;
+    float:left;
+    padding: 2px 4px;;
+  }
