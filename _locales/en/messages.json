@@ -11,13 +11,8 @@
 
 	// Internal application translation
 
-	"appTitle": {
-		"message": "TODO lists",
-		"description": "This is the application title"
-	},
-
 	"globalList": {
-		"message": "Global",
+		"message": "TODO",
 		"description": "This is the name for the default todo list"
 	}	
 

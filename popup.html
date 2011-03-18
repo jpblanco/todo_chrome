@@ -1,19 +1,34 @@
 <html>
-<head>
-  <link rel="stylesheet" type="text/css" href="markitup/skins/markitup/style.css"/>
-  <link rel="stylesheet" type="text/css" href="markitup/sets/default/style.css"/>
-  <link rel="stylesheet" type="text/css" href="style.css"/>
-  <script type="text/javascript" src="jquery-1.5.1.min.js"></script>
-  <script type="text/javascript" src="jquery.json-2.2.min.js"></script>
-  <script type="text/javascript" src="domcached-0.1-jquery.js"></script>
-  <script type="text/javascript" src="markitup/jquery.markitup.js"></script>
-  <script type="text/javascript" src="markitup/sets/default/set.js"></script>
-  <script type="text/javascript" src="application.js"></script>
-</head>
-<body>
-<h1 id="app_title"></h1>
-<div class="content">
-  <div id="lists"></div>
-</div>
-</body>
+	<head>
+		<link rel="stylesheet" type="text/css" href="markitup/skins/markitup/style.css"/>
+		<link rel="stylesheet" type="text/css" href="markitup/sets/default/style.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+		<script type="text/javascript" src="javascripts/jquery-1.5.1.min.js"></script>
+		<script type="text/javascript" src="javascripts/jquery.json-2.2.min.js"></script>
+		<script type="text/javascript" src="javascripts/domcached-0.1-jquery.js"></script>
+		<script type="text/javascript" src="markitup/jquery.markitup.js"></script>
+		<script type="text/javascript" src="markitup/sets/default/set.js"></script>
+		<script type="text/javascript" src="javascripts/application.js"></script>
+		<script type="text/javascript" src="javascripts/loader.js"></script>
+	</head>
+	<body>
+		<div class="content">
+			<div id="lists" class="clearfix">
+				
+			</div>
+		</div>
+	<a href="#" onclick="hola()">hola</a>
+	<script>
+function hola(){
+	var notification = webkitNotifications.createNotification(
+		'icons/icon.png',  
+		'Hello!',  
+		'Lorem ipsum...'  
+	);
+	
+	notification.show();
+
+}
+</script>
+	</body>
 </html>
