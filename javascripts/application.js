@@ -3,6 +3,8 @@ var Settings = {
 	settingsName: "namespaceSettings"
 };
 
+var selectedNamespace = "default";
+
 var DB = function() {
 	return {
 		save: function(key, value, namespace){
@@ -29,6 +31,16 @@ var DB = function() {
 			});
 
 			return namespaces;
+		},
+
+		getAllKeysFromNamespace: function(namespace) {
+			var keys = [];
+
+			$.each($.DOMCached.storage[namespace], function(key, value){
+				keys.push(key);
+			});
+
+			return keys;
 		}
 	}
 }();
@@ -109,8 +121,50 @@ var Lists = function() {
 	}
 }();
 
+var ToDo = function(){
+	return {
+		create: function(title){
+			var json_todo = {creation_at: new Date()};
+			json_todo["title"] = title;
+
+			var interval_regexp = /@\s*every\s+(\d+)\s+(day|days|week|weeks|month|months|year|years)@/i
+
+			var match = interval_regexp.exec(title);
+			
+			if (match != null){
+				title = title.replace(interval_regexp, "");
+
+				json_todo["title"] = title;
+				json_todo["every_number"] = parseInt(match[0]);
+				json_todo["every_interval"] = match[1];  
+			}
+
+			DB.save(title, json_todo, selectedNamespace);
+			ToDo.loadAll();
+		},
+		
+		loadAll: function() {
+			var keys = DB.getAllKeysFromNamespace(selectedNamespace);
+
+			var todos = $("#todos")
+			todos.html("");
+	
+			$.each(keys, function(index, key){
+
+				if (key != "todosCounter" && key != "settings"){
+					var todo = DB.load(key, selectedNamespace); 
+					
+					var li = $("<li></li>").text(todo.title);
+					
+					todos.prepend(li);
+				}
+			});
+		}
+	}
+}();
+
 $(function(){
 	Counter.load();
-
+console.log(DB.getAllKeysFromNamespace("default"));
 	//$('#test').markItUp(richTextDefaultSettings);	
 });

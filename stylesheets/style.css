@@ -14,6 +14,35 @@ div.content div#lists {
 	background-color: #EEEEEE;
 }
 
+div.content div.action_container {
+	padding: 15px 5px;
+	border-bottom: 1px solid #AAAAAA;
+}
+
+input[type="text"] {
+	border: 1px solid #BDC7D8;
+}
+
+input[type="text"].adder {
+	font-size: 13px;
+	height: 24px;
+	width: 270px;
+}
+
+a.ui_button {
+	background: #5B74A8 url(images/buttons_bg.png) repeat-x scroll 0 0;
+	height: 16px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+	outline: none;
+	padding: 5px 6px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
 .list {
 	padding: 6px 8px 2px;
 	font-weight: bold;
