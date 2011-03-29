@@ -8,8 +8,14 @@ $(function(){
 		if (todo_title.val() != ""){
 			ToDo.create(todo_title.val());		
 		}
+        
+        $("#todo_title").val("");
 
-		event.stopPropagation();
-		event.preventDefault();
+		return false;
 	});
+    
+    $("#todos li").click(function(event){
+        $(this).addClass("completed");
+        
+    });
 });

@@ -76,3 +76,26 @@ a.ui_button {
 .clearfix, .container {
   display: block; 
 }
+
+#todos{
+   margin: 0;
+   padding: 0;
+}
+
+#todos li{
+    font-size: 22px;
+    list-style-type: none;
+    cursor: pointer;
+    padding-left: 20px;
+    
+}
+.completed{
+    text-decoration: line-through;
+    color: #ccc;
+}
+#todos li:hover{
+    background-color:#AAC6FF;
+}
+
+
+
